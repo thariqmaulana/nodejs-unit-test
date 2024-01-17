@@ -1,4 +1,4 @@
-import { sum } from "../src/sum"
+import { sum, sumAll } from "../src/sum"
 
 test("test sum function", () => {
 
@@ -6,5 +6,10 @@ test("test sum function", () => {
 
    expect(result).toBe(3)
 
+})
+
+test("test sum all", () => {
+   const numbers = [1,2,3,4,5];
+   expect(sumAll(numbers)).toBe(15);
 })
  

@@ -8,9 +8,24 @@
     "test": "jest"
   },
   "jest": {
+    "maxConcurrency": 5,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
-    }
+    },
+    "collectCoverage": false,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+      "collectCoverageFrom": [
+        "src/**/*.{js,jsx}",
+        "!**/node_modules/**",
+        "!**/vendor/**"
+      ]
   },
   "author": "thariq maulana",
   "license": "UNLICENSED",
